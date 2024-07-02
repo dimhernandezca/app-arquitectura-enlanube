@@ -70,13 +70,6 @@ form {
     color: #33658A;
 }
 
-.radio-group label {
-    font-weight: normal;
-    font-size: 16px;
-    padding: 0;
-    text-align: left;
-}
-
 select {
     padding: 5px;
     border: 2px solid #33658A;

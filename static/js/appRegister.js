@@ -1,3 +1,3 @@
 function registerUser(){
-    alert("Boton de registrar usuario clickeado")
+    alert("Registro de mascota Exitoso")
 }   

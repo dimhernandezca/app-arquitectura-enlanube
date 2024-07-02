@@ -1,25 +1,38 @@
 img {
-    height: 500px;
+    width: 500px;
 }
 
 h1 {
-    text-align: center;
     font-size: 40px;
 }
 
-div {
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('https://clipart-library.com/images/kcMnRqBoi.gif'), linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+    overflow: hidden;
     text-align: center;
+    color: #B9FFB7;
+    font-family: sans-serif
 }
 
-body {
-    background-color: #9FBBCC; 
-}
 button {
     font-size: 20px;
-    background-color: #191D32;
-    color: white;
+    font-weight: bold;
+    background-color: #33658A;
+    color: #B9FFB7;
+    border: none;
     border-radius: 10px;
-    padding: 1px;
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: 0.1s ease;
     margin-left: 0.3%;
     margin-right: 0.3%;
+}
+
+button:hover {
+    border: 3px solid #B9FFB7;
 }
