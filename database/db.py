@@ -13,3 +13,7 @@ def connectionSQL():
         print("Successfull connection to the database")
     except:
         print("Error connecting to the database")
+
+def add_user(nombreMascota, propietario, petType, raza, edad, sexo):
+    print("HOLA")
+
