@@ -15,8 +15,9 @@ def connectionSQL():
         )
         print("Successfull connection to the database")
         return connectio_sql
-    except:
+    except Exception as err:
         print("Error connecting to the database")
+        print (err)
         return None
 
 def add_user(nombreMascota, propietario, petType, raza, sexo, edad):
@@ -28,7 +29,23 @@ def add_user(nombreMascota, propietario, petType, raza, sexo, edad):
             cursor = connection_sql.cursor()
             cursor.execute(intruction_sql)
             connection_sql.commit()
+            print("User added")
+            return True
         else:
             print("Error connecting to the database")
+            return False 
     except Exception as err:
+        print("Error creating the user")
         print(err)
+        return False
+        
+def consult_user(nombreMascota, propietario):
+        instruction_sql = "select * from MASCOTAS WHERE nombreMascota = '" + nombreMascota + "' AND propietario = '" + propietario + "';"
+        connection_sql = connectionSQL()
+        try:
+            cursor = connection_sql.cursor()
+            cursor.execute(instruction_sql)
+            result_data = cursor.fetchall()
+            print(result_data)
+        except Exception as err:
+            print("Error", err)
